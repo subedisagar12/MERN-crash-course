@@ -24,13 +24,13 @@ const blogRoutes = require("./routes/blogRoutes");
 //   });
 // });
 
+app.use(express.json());
+
 app.use("/blog", blogRoutes);
 
 // connecting to our database
 mongoose
-  .connect(
-    "mongodb+srv://admin:admin@cluster0.j9higjy.mongodb.net/?retryWrites=true&w=majority"
-  )
+  .connect("")
   .then(() => {
     console.log("Connected to database");
   })
