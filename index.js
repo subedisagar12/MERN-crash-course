@@ -30,7 +30,9 @@ app.use("/blog", blogRoutes);
 
 // connecting to our database
 mongoose
-  .connect("")
+  .connect(
+    "mongodb+srv://admin:admin@cluster0.j9higjy.mongodb.net/Blog?retryWrites=true&w=majority"
+  )
   .then(() => {
     console.log("Connected to database");
   })
